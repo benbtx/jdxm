@@ -1,0 +1,36 @@
+@import "./aside-common.scss";
+
+
+.rightAside {
+  @extend .common-aside;
+  overflow:hidden;
+}
+.linesContainer{
+  height:calc( 100% - 272px );
+  overflow: hidden;
+  .lines{
+    transition: 2s linear;
+
+  }
+  .line{
+    padding:12px 20px;
+    display:flex;
+    justify-content: space-between;
+    
+    .text{
+      flex:1;
+      overflow: hidden;
+    /*文本不会换行*/
+    white-space: nowrap;
+    /*当文本溢出包含元素时，以省略号表示超出的文本*/
+    text-overflow: ellipsis;
+    }
+    .number{
+      color:$number-color;
+      margin-left:20px;
+    }
+  }
+  .single.line{
+    background-color: rgba(0, 174, 255, 0.1);
+  }
+}

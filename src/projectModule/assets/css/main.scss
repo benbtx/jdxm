@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    height: 100%;
+}
+
+.box-shadow {
+    box-shadow: 0px 1px 4px #ced3d9;
+}
+
+.bcgColor {
+    // 通用容器样式
+    height: 100%;
+    background: #FFF;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* 滚动槽 */
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.06);
+        background: rgb(255, 255, 255);
+        box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    }
+
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background: rgba(144, 147, 153, .1);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        transition: .5s;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}

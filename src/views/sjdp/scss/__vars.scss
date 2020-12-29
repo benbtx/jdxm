@@ -1,0 +1,25 @@
+$background-blur: rgba(0, 0, 0, 0.3);
+$background-main-blur: rgba(31, 122, 129, 0.2);
+
+$colorMain: #00fffe;
+$colorPlain: #fff;
+
+$circlc-boxShadow: inset 0px 0px 20px rgba(39, 194, 234, 1);
+$circlc-boxShadow-8: inset 0px 0px 20px rgba(39, 194, 234, 0.8);
+$circlc-boxShadow-6: inset 0px 0px 20px rgba(39, 194, 234, 0.6);
+$circlc-boxShadow-4: inset 0px 0px 20px rgba(39, 194, 234, 0.4);
+$circlc-boxShadow-2: inset 0px 0px 20px rgba(39, 194, 234, 0.2);
+$circlc-boxShadow-0: inset 0px 0px 20px rgba(39, 194, 234, 0);
+
+$design-org-width: 1920;
+$design-org-height: 1080;
+
+@function exchangeWidth($width) {
+  @return $width / $design-org-width*100%;
+}
+
+@function exchangeHeight($height) {
+  @return $height / $design-org-height*100%;
+}
+$number-color:#f5e400;
+$text-color:#7dc9ff;

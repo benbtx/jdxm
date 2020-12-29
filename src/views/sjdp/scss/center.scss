@@ -1,0 +1,37 @@
+@import "./_vars.scss";
+
+.centerFrame {
+  position: relative;
+}
+
+.center-header {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  background: rgba(0, 0, 0, 0);
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    font-size: 30px;
+  }
+
+  .text.first {
+    margin-right: 20px;
+  }
+
+  .num-card {
+    padding: 14px 16px;
+    border-radius: 3px;
+    border: solid 2px rgba(90, 197, 221, 0.5);
+    display: inline-block;
+    margin-right: 14px;
+  }
+
+  .number {
+    font-size: 40px;
+    color: $number-color;
+  }
+}

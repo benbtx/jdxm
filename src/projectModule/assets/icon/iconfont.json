@@ -1,0 +1,65 @@
+{
+  "id": "2190195",
+  "name": "drc",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9626862",
+      "name": "服务器",
+      "font_class": "fuwuqi",
+      "unicode": "e86c",
+      "unicode_decimal": 59500
+    },
+    {
+      "icon_id": "4360976",
+      "name": "禁用",
+      "font_class": "jinyong",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8897334",
+      "name": "启用",
+      "font_class": "qiyong",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "11121492",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "862481",
+      "name": "编辑",
+      "font_class": "bianji-copy-copy",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "795509",
+      "name": "眼睛",
+      "font_class": "ai-eye",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "17606405",
+      "name": "刷子-1",
+      "font_class": "shuazi-1",
+      "unicode": "e6b6",
+      "unicode_decimal": 59062
+    },
+    {
+      "icon_id": "7159343",
+      "name": "数据库",
+      "font_class": "shujuku",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    }
+  ]
+}

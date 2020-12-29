@@ -1,0 +1,124 @@
+@import "./basic-color.scss";
+
+.el-button--primary{
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: #fff;
+    &:hover{
+        background-color: transparentize($color-primary,$opacity);
+        border: 1px solid transparentize($color-primary,$opacity);
+        color:#fff
+    }
+}
+
+.el-pager{
+    .number{
+        &:hover {
+            color: $color-primary ;
+        }
+    }
+    .active{
+        background-color: $color-primary;
+    }
+}
+
+.el-select .el-input.is-focus .el-input__inner{
+    border-color:$color-primary ;
+}
+.el-select-dropdown__item.selected{
+    color: $color-primary ;
+}
+
+.el-input__inner:focus {
+    border-color: $color-primary ;
+}
+
+.el-dropdown-menu{
+    .el-dropdown-menu__item:hover{
+        background-color: rgba(255,255,255,0);
+    }
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background-color:$color-primary  ;
+    border-color:$color-primary ;
+}
+.el-checkbox__input.is-checked+.el-checkbox__label{
+    color:$color-primary  ;
+}
+.el-button--text{
+    color:$color-primary  ;
+}
+
+.el-radio__input.is-checked .el-radio__inner{
+    background:$color-primary ;
+    border-color:$color-primary  ;
+}
+.el-radio__input.is-checked+.el-radio__label{
+    color:$color-primary  ;
+}
+
+
+.el-tabs__item.is-active{
+    color:$color-primary !important ;
+}
+.el-tabs__item:hover{
+    color:$color-primary !important ;
+}
+.el-tabs__header{
+    margin: 0 0 20px;
+}
+
+.el-dialog{
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 50px!important;
+}
+.el-dialog__header{
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid $color-border;
+    background-color: $color-primary;
+    .el-dialog__title{
+        font-size: 14px;
+        color: #fff;
+    }
+
+}
+.el-dialog__headerbtn{
+    top: 0px;
+    line-height: 40px;
+    .el-dialog__close{
+        color: #dcdcdc;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+.el-dialog__body{
+    padding: 20px 20px;
+}
+.el-dialog__footer{
+    padding: 10px;
+   border-top: 1px solid $color-border;
+}
+
+.el-tree-node__content:hover{
+    background-color: $color-secondary;
+}
+.is-current>.el-tree-node__content{
+    background-color: $color-secondary;
+}
+// 项目实际需要的行高
+.el-table td, .el-table th{
+    padding: 10px 0!important;
+    .cell{
+        // line-height: 34px!important;
+    }
+}
+.el-input--small .el-input__inner{
+    height: 36px;
+    line-height: 36px;
+}

@@ -1,0 +1,373 @@
+@import "./basic-color.scss";
+
+*, ::before, ::after {
+    /*选择所有标签*/
+    margin: 0;
+    padding: 0;
+
+    /*清除移动端默认的点击高亮效果*/
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+    /*设置所有的元素都是以边框开始计算宽度的 百分比*/
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    color: $content-text-color;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+
+
+.el-message-box {
+    width: auto;
+    min-width: 40%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .query-form-item.el-form-item {
+        display: block !important;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .query-form-item .el-form-item__content {
+        width: 100%;
+        .el-select {
+            width: 100%;
+        }
+    }
+    .el-dialog {
+        width: 80%;
+        margin-top: 50px!important;
+    }
+
+    .el-message {
+        min-width: 70% !important;
+    }
+}
+
+.container-left {
+    background-color: $background-color!important;
+    .submenu-title-noDropdown,
+    .el-submenu__title {
+        background-color: $background-color!important;
+        &:hover {
+            color: #fff !important;
+            background-color: $menu-title-hover!important;
+            & .iconfont {
+                color: #fff !important;
+            }
+        }
+        &:hover::before{
+            content:"";
+            display: inline-block;
+            width: 4px;
+            height: 100%;
+            background-color: $color-primary;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .nest-menu .el-submenu>.el-submenu__title,
+    .el-submenu .el-menu-item {
+        background-color: $menu-item !important;
+        &:hover {
+            color: #fff !important;
+            background-color: $color-primary !important;
+        }
+    }
+    .el-menu .is-active{
+        color: #fff;
+        background-color: $color-primary !important;
+    }
+}
+// 左侧导航栏的折叠后的样式
+.el-menu--collapse {
+    .el-submenu {
+        .el-submenu__title {
+            span {
+                height: 0;
+                width: 0;
+                overflow: hidden;
+                visibility: hidden;
+                display: inline-block;
+            }
+            .el-submenu__icon-arrow {
+                display: none;
+            }
+        }
+    }
+    .el-menu-item {
+        .el-tooltip {
+            span {
+                height: 0;
+                width: 0;
+                overflow: hidden;
+                visibility: hidden;
+                display: inline-block;
+            }
+        }
+    }
+}
+.el-menu--vertical {
+
+    .nest-menu.el-submenu>.el-submenu__title,
+    .el-menu-item {
+        &:hover {
+            color: #fff !important;
+            background-color: $color-primary!important;
+        }
+    }
+
+    .el-menu-item.is-active{
+        color: #fff !important;
+        background-color: $color-primary!important;
+    }
+    .el-menu--popup{
+        padding: 0px !important;
+    }
+    // the scroll bar appears when the subMenu is too long
+
+}
+
+
+.table-scrollbar {
+    height: 75vh;
+}
+
+@media screen and (min-width: 1919px) {
+    .table-scrollbar {
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .table-scrollbar {
+        height: 85vh;
+    }
+}
+
+//重用样式
+.box-shadow{
+box-shadow: 2px 2px 2px #ced3d9;
+}
+
+.iput-normal-width{
+    width: 180px!important;
+}
+
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    background: $color-primary;
+
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary;
+    opacity: 1.0;
+
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+}
+
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+
+    border: solid 2px transparent;
+    border-top-color: $color-primary;
+    border-left-color: $color-primary;
+    border-radius: 50%;
+
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.d2-crud-body{
+    padding: 0px!important;
+}
+
+//重写element 样式
+.el-button--default{
+    border-color: $color-primary;
+    color: $color-primary;
+    &:hover{
+        background: #fff;
+        color: transparentize($color-primary,$opacity);
+    }
+}
+
+.el-button--primary{
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: #fff;
+    &:hover{
+        background-color: transparentize($color-primary,$opacity);
+        border: 1px solid transparentize($color-primary,$opacity);
+        color:#fff
+    }
+}
+
+.el-pager{
+    .number{
+        &:hover {
+            color: $color-primary ;
+        }
+    }
+    .active{
+        background-color: $color-primary;
+    }
+}
+.el-select .el-input.is-focus .el-input__inner{
+    border-color:$color-primary ;
+}
+.el-select-dropdown__item.selected{
+    color: $color-primary ;
+}
+.el-input__inner:focus {
+    border-color: $color-primary ;
+}
+.el-dropdown-menu{
+    .el-dropdown-menu__item:hover{
+        background-color: rgba(255,255,255,0);
+    }
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background-color:$color-primary  ;
+    border-color:$color-primary ;
+}
+.el-checkbox__input.is-checked+.el-checkbox__label{
+    color:$color-primary  ;
+}
+.el-button--text{
+    color:$color-primary  ;
+}
+.el-dropdown{
+    .el-button{
+        background-color: #fff;
+        border-color: #E5E5E5 ;
+        color: $content-text-color;
+    }
+    .el-dropdown__caret-button{
+        border-left: 1px solid #E5E5E5;
+    }
+}
+.el-radio__input.is-checked .el-radio__inner{
+    background:$color-primary ;
+    border-color:$color-primary  ;
+}
+.el-radio__input.is-checked+.el-radio__label{
+    color:$color-primary  ;
+}
+.el-dialog{
+    border-radius: 5px 5px 0px 0px;
+    margin-top: 50px!important;
+}
+.el-dialog__header{
+    color: #fff;
+    background-color: $background-color;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+
+    .el-dialog__title{
+        color: #fff;
+        font-size: 14px;
+    }
+
+}
+.el-dialog__headerbtn{
+    top:13px;
+    .el-dialog__close{
+        color: #fff;
+        &:hover{
+            color:$color-primary ;
+        }
+    }
+}
+.el-dialog__body{
+    padding: 20px 20px;
+}
+
+.el-tabs__item.is-active{
+    color:$color-primary !important ;
+}
+.el-tabs__item:hover{
+    color:$color-primary !important ;
+}
+.el-tabs__header{
+    margin: 0 0 20px;
+}
